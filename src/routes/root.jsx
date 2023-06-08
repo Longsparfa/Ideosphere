@@ -10,7 +10,7 @@ const Root = () => {
         <Navbar />
 <main>   
   <div className="wrapper">
-  <div className="fixed bottom-0 z-30 flex h-screen w-full items-center justify-center bg-theme" style={{transform: "scaleY(0) translateZ(0);" }} /> 
+  <div className="fixed bottom-0 z-30 flex h-screen w-full items-center justify-center bg-theme" style={{transform: "scaleY(0) translateZ(0)" }} /> 
     <div className="relative mb-8 px-8 md:mb-16 md:px-16">
           
         
