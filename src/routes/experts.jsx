@@ -1,23 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Navbar, Article, Footer } from '../components';
 import { abubakarAbdullahi, kechiOkpala, paulEnejo, musaMohammed } from '../assets';
-import { IoIosAdd } from 'react-icons/io';
+import { IoIosAdd, IoIosClose } from 'react-icons/io';
 
 
 const Experts =  ({ imgsource, name, detail }) => {
+    const [toggleParagraph, setToggleParagraph] = useState(false);
+
+
   return (
     <div class="relative h-96 overflow-y-hidden md:h-[28rem]">
-          <img src={imgsource} alt="Abubakar-Abdullahi" className="object-cover" style={{position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent'}} />
+          <img 
+             src={imgsource} 
+             alt="Abubakar-Abdullahi"
+             className="object-cover"
+             style={{
+                position: 'absolute',
+                height: '100%',
+                width: '100%',
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: 'transparent'
+                }}
+            />  
+            
               <div class="relative h-full w-full">
-                    <div class="absolute bottom-0 w-full space-y-3 bg-gradient-to-b from-black/25 via-black/75 to-black px-4 py-2 text-white transition-transform duration-200 ease-in-out translate-y-[calc(100%-2.5rem)]">
-                          <div class="flex items-center justify-between">
-                            <span class="font-semibold uppercase">{name}</span>
-                            <button class="ease transform transition duration-200">
-                                {IoIosAdd}
-                            </button>
-                          </div>
-                          <p>{detail}</p>
+              <div
+          class={`absolute bottom-0 ${
+            toggleParagraph && 'bottom-[6rem] transition-all duration-500'
+          } w-full  bg-gradient-to-b from-black/25 via-black/75 to-black
+           text-white h-[2rem] duration-500 ease-in-out translate-y-[calc(100%-2.5rem)]`}
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-semibold uppercase text-[1.2rem] items-center justify-center">
+              {name}
+            </span>
+            <button
+              class="ease transform transition duration-200"
+              onClick={() => setToggleParagraph(!toggleParagraph)}
+            >
+              {toggleParagraph ? (
+                <IoIosClose size={35} />
+              ) : (
+                <IoIosAdd size={35} />
+              )}
+            </button>
+          </div>
+                          <p
+                          className="transition-all h-[100vh] duration-500  bg-gradient-to-b from-black/25 via-black/75 to-black
+                          "
+                          >{detail}</p>
                   </div>
              </div>
     </div>
@@ -46,7 +81,7 @@ const ResidentExperts = () => {
                                 </h1>
                             </span>
                         </div>
-                        <div class="grid grid-cols-mobile md:grid-cols-standard">
+                        <div class="">
                             <div class="col-[2]">
                                 <span>
                                     <p class="md:text-center">Ideosphere draws on an army of the best professionals with a broad diversity of educational and professional backgrounds—all bound by a shared passion for problem-solving. Our team members have prior experience as reporters, lawyers, economists, television producers, campaign operatives and crisis professionals. As a result, the firm brings a unique perspective to a large portfolio of clients across all industries and institutions.</p>

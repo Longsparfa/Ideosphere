@@ -9,7 +9,22 @@ const Logos =  ({ imgsource }) => {
     return (
     <div className="flex h-36 w-full items-center justify-center">
        <div className="relative h-28 w-28 rounded-full ">
-            <img src={imgsource} alt="logo of cbn" className="object-cover" style={{position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent'}} />
+       <img 
+             src={imgsource} 
+             alt="logo of cbn"
+             className="flex object-fill h-48 w-96 items-center justify-center"
+             style={{
+               //  position: 'absolute',
+                height: '100%',
+                width: '100%',
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                //    color: 'transparent'
+                }}
+            />
+            
          </div>
     </div>
     );
@@ -39,13 +54,14 @@ const DeliveryHistory = () => {
                                 </h1>
                             </span>
                         </div>
-                        <div className="grid grid-cols-mobile md:grid-cols-standard">
+                        <div className="">
                             <div className="col-[2]">
                                 <span>
                                     <p className="md:text-center">We focus on delivering tangible, measurable results leading to a superior return on investment for our clients. Since the founding of the company in 2010, Ideosphere has been involved in hundreds of transactions with a total value of around $50M. Most of our high-profile clients prefer to remain confidential and we respect their wishes.</p>
                                 </span>
                               </div>
-                              <div className="mt-8 grid grid-cols-2 gap-8 px-8 sm:grid-cols-2 md:grid-cols-3 md:px-16 lg:grid-cols-6">
+                              <div className="mt-8 grid grid-cols-2 gap-8 px-16 sm:grid-cols-2 md:grid-cols-3 md:px-16 lg:grid-cols-6">
+                              
                                  <Logos imgsource={cbn}  />
 
                                  <Logos imgsource={ecowas} />
@@ -81,8 +97,9 @@ const DeliveryHistory = () => {
                                  <Logos imgsource={cbnCenef} />
 
                                  <Logos imgsource={mangoAm} />
+                                
+                            </div>
 
-                              </div>
                         </div>
                         <div className="mt-40 px-8 md:px-16">
                             <section>
