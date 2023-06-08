@@ -22,7 +22,7 @@ const CorCulture = () => {
                     </div>
 
 
-                    <div className='grid grid-cols-mobile md:grid-cols-standard'>
+                    <div className=''>
                         <div className="relative col-span-full h-[500px] w-full bg-black">
                             <img src="brand-positioning-definition.jpg" alt="Brand Positioning Definition" />
                         </div>

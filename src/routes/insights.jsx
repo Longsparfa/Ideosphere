@@ -48,7 +48,7 @@ const StrategicInsights = () => {
                     </span>
                     
                  </div>
-                 <div className='grid grid-cols-mobile md:grid-cols-standard'>
+                 <div className=''>
                     <div className="col-[2]">
                         <span style={{ opacity: 1, transform: "translateY(0%) translateZ(0px)" }}>
                             <p className="md:text-center">Explore our collection of thought-provoking think pieces, written by our friends and experts. We've carefully curated this list to ensure that there is no limit to the information you can access. Discover new perspectives and ideas to expand your knowledge.</p>

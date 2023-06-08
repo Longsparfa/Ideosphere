@@ -20,7 +20,7 @@ const CommStrategy = () => {
                                 Insights
                             </h1>
                     </div>
-                    <div className='grid grid-cols-mobile md:grid-cols-standard'>
+                    <div className=''>
                         <div className="relative col-span-full h-[500px] w-full bg-black">
                            <img alt="Brand Positioning" src="/brand-positioning-definition.jpg" decoding="async" data-nimg="fill" class="object-cover" loading="lazy" style={{position: 'absolute', height: '100%', width: '100%', left: 0, top: 0, right: 0, bottom: 0, color: 'transparent'}} />
                         </div>
